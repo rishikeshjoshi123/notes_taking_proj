@@ -87,15 +87,18 @@ function DeleteNote(index) {
 
 // search box functionality
 function search_and_display() {
-    console.log(document.getElementById('search-box').value);
-
     let search_term = document.getElementById('search-box').value;
-    if (search_term == '') return; // if search box is empty
+    console.log(search_term);
+
+    if (search_term == '') { // if search box is empty
+        DisplayNotes();
+        return;
+    }
     let notes_obj;
     let titles_obj;
     if (localStorage.getItem('notes') != null) {
-        notes_obj = localStorage.getItem('notes');
-        titles_obj = localStorage.getItem('titles');
+        notes_obj = JSON.parse(localStorage.getItem('notes'));
+        titles_obj = JSON.parse(localStorage.getItem('titles'));
     }
 
     console.log('length of notes obj is :' + notes_obj.length + ' and titles obj is :' + titles_obj.length);
@@ -103,19 +106,15 @@ function search_and_display() {
     let new_notes = [];
     let new_titles = [];
     for (let i = 0; i < notes_obj.length; ++i) {
-        const e_note = notes_obj[i];
-        const e_title = titles_obj[i];
-        console.log(e_title);
-        // console.log(e_note.includes(search_term));
-        if (e_note.includes(search_term) == true) {
+        let e_note = notes_obj[i];
+        let e_title = titles_obj[i];
+
+        if (e_note.includes(search_term) == true || e_title.includes(search_term) == true) {
             new_notes.push(e_note);
             new_titles.push(e_title);
-            console.log('reached here line 109');
         }
     }
 
-    for (let i = 0; i < new_titles.length; ++i)
-        console.log('selcted titles for the matching search term ' + new_titles[i] + ' .');
 
     show_notes(new_notes, new_titles);
 
