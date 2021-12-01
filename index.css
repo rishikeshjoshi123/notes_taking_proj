@@ -1,0 +1,96 @@
+/* reusable stuff */
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.color_it {
+    color: rgb(94, 83, 255);
+}
+
+.btn {
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgb(94, 83, 255);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+
+/* =============================================== */
+
+html {
+    font-family: 'Courier Prime', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+#Title {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#logo {
+    width: 100px;
+}
+
+.top-section {
+    background-color: rgb(219, 202, 197);
+}
+
+#navbar {
+    list-style: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.navbar_item {
+    padding: 1em;
+}
+
+.search_bar {
+    /* align-content: center; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3%;
+}
+
+.writting-space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-section {
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+.note {
+    /* this is saved note that will appear in our screen */
+    border: solid 2px rgb(25, 0, 255);
+    border-radius: 1rem;
+    /* max-width: 300px; */
+    min-width: 163px;
+    min-height: 128px;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+}

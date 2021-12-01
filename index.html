@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Notes</title>
+</head>
+
+<!-- Link of font for text in page -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+<!-- Link of font for Title of page-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+
+
+<body>
+    <div class="top-section row">
+        <img src="logo.jpeg" alt="Logo image" id="logo">
+        <p id="Title"><span class="color_it">Fast</span> Notes</p>
+        <ul id="navbar" class="row">
+            <li class="navbar_item">Home</li>
+            <li class="navbar_item">About us</li>
+        </ul>
+
+        <div class="search_bar">
+            <input type="text" id="search-box"></input>
+            <button onclick="search_and_display()" class="btn" id="search-button">Search</button>
+        </div>
+    </div>
+
+    <hr>
+    <div class="writting-space">
+        <h1>Welcome to <span class="color_it">Fast</span> Notes</h1>
+        <div class="text-area">
+            <h5 style="margin-bottom: 0px;">Enter title here</h5>
+            <input type="text" name="Enter title here" id="title-area"></input>
+            <h5 style="margin-bottom: 0px;">Enter note here</h5>
+            <textarea name="Enter text here" id="note-area" cols="150" rows="05"></textarea>
+            <button id="add-note-button" type="submit" class="btn">Add Note</button>
+        </div>
+    </div>
+    <hr>
+    <h3 style="display: flex; flex-direction: row; justify-content: center; ">Your Saved Notes</h3>
+    <h4 style="display: flex; flex-direction: row; justify-content: center;" id="empty-storage-msg">Storage is empty!</h4>
+
+    <div id="display-area" class="bottom-section row">
+        <!-- note cards will be added here through javascript -->
+    </div>
+
+</body>
+
+<link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
+
+</html>
