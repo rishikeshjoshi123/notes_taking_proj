@@ -24,8 +24,9 @@ document.getElementById('add-note-button').addEventListener('click', function() 
         document.getElementById('title-area').value = ""; //clearing title area
         return;
     }
-    notes_obj.push(document.getElementById('note-area').value); // push text value in notes-object
-    titles_obj.push(document.getElementById('title-area').value); // push title value in title-obj
+
+    notes_obj.unshift(document.getElementById('note-area').value); // push text value in notes-object at front of array
+    titles_obj.unshift(document.getElementById('title-area').value); // push title value in title-obj at front of array
 
     document.getElementById('note-area').value = ""; // clearing note text area 
     document.getElementById('title-area').value = ""; //clearing title area
@@ -100,8 +101,6 @@ function search_and_display() {
         notes_obj = JSON.parse(localStorage.getItem('notes'));
         titles_obj = JSON.parse(localStorage.getItem('titles'));
     }
-
-    console.log('length of notes obj is :' + notes_obj.length + ' and titles obj is :' + titles_obj.length);
 
     let new_notes = [];
     let new_titles = [];
