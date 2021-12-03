@@ -44,7 +44,7 @@ body {
 }
 
 .top-section {
-    background-color: rgb(219, 202, 197);
+    background-color: rgb(255, 233, 34);
 }
 
 #navbar {
@@ -68,6 +68,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    background-color: rgb(197, 238, 103);
 }
 
 .text-area {
@@ -76,9 +78,14 @@ body {
     align-items: center;
 }
 
-.bottom-section {
+.display-card-area {
     flex-wrap: wrap;
     font-size: 1rem;
+}
+
+#bottom-section {
+    min-height: 100vh;
+    background-color: rgb(255, 195, 127);
 }
 
 .note {

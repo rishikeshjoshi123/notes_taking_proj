@@ -35,7 +35,6 @@
         </div>
     </div>
 
-    <hr>
     <div class="writting-space">
         <h1>Welcome to <span class="color_it">Fast</span> Notes</h1>
         <div class="text-area">
@@ -46,12 +45,17 @@
             <button id="add-note-button" type="submit" class="btn">Add Note</button>
         </div>
     </div>
-    <hr>
-    <h3 style="display: flex; flex-direction: row; justify-content: center; ">Your Saved Notes</h3>
-    <h4 style="display: flex; flex-direction: row; justify-content: center;" id="empty-storage-msg">Storage is empty!</h4>
 
-    <div id="display-area" class="bottom-section row">
-        <!-- note cards will be added here through javascript -->
+    <div id="bottom-section">
+
+        <h3 id="show-notes-heading" class="bottom-section" style="display: flex; flex-direction: row; justify-content: center; ">Your Saved Notes</h3>
+        <h4 id="empty-storage-heading" class="bottom-section" style="display: flex; flex-direction: row; justify-content: center;" id="empty-storage-msg">Storage is empty!</h4>
+
+        <div id="display-area" class="row display-card-area">
+
+            <!-- note cards will be added here through javascript -->
+        </div>
+
     </div>
 
 </body>

@@ -137,11 +137,13 @@ function show_notes(notes, titles) {
     }
 
     if (notes.length != 0) {
-        document.getElementById('empty-storage-msg').style.display = 'none';
+        document.getElementById('empty-storage-heading').style.display = 'none';
+        document.getElementById('show-notes-heading').style.display = 'flex';
         document.getElementById('display-area').style.display = 'flex';
         document.getElementById('display-area').innerHTML = html;
     } else {
-        document.getElementById('empty-storage-msg').style.display = 'flex';
+        document.getElementById('empty-storage-heading').style.display = 'flex';
+        document.getElementById('show-notes-heading').style.display = 'none';
         document.getElementById('display-area').style.display = 'none';
     }
 
